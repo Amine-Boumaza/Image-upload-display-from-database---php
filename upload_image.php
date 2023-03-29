@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $image_name = $_FILES['image']['name'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
-    $image_path = 'uploads/' . $image_name;
+    $image_path = $image_name;
     move_uploaded_file($image_tmp_name, $image_path);
     $story = $_POST['story'];
     // Store image in database
