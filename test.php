@@ -26,11 +26,7 @@
 <body>
     <?php
     // Connect to database
-    $host = "127.0.0.1";
-    $username = "root";
-    $password = "";
-    $dbname = "client";
-    $conn = mysqli_connect($host, $username, $password, $dbname);
+    $conn = mysqli_connect("127.0.0.1", "root", "", "client");
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
@@ -65,7 +61,7 @@
     // Close database connection
     mysqli_close($conn);
     ?>
-
+    <button href></button>
     <a href="form.html">Add Image</a>
 </body>
 
