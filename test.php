@@ -26,11 +26,7 @@
 <body>
     <?php
     // Connect to database
-    $conn = mysqli_connect("127.0.0.1", "root", "", "client");
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
+    include "db_connect.php";
     // Fetch images from database
     $sql = "SELECT * FROM images";
     $result = mysqli_query($conn, $sql);
